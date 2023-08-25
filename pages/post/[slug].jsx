@@ -6,23 +6,28 @@ const postsDirectory = 'public/documentacion_curso/'
 
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(postsDirectory);
-  const paths = files.map((fileName) => ({
-    params: {
-      slug: fileName.replace('.md', ''),
-    },
-  }));
+  const files = fs.readdirSync(postsDirectory);  
+  const exclude = [".git", "css", "index.html", "ima"]
+  const validPaths = []
+  files.forEach((fileName) => {
+    if (!exclude.includes(fileName)) {      
+      validPaths.push({
+        params: {
+          slug: fileName.replace('.md', ''),
+        },
+      });
+    }          
+  });
+
   return {
-    paths,
+    paths: validPaths,
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params: { slug } }) {
 
-  const exclude = [".git", "css", "index.html", "ima"]
-
-  if (!exclude.includes(slug)) {
+  if (slug) {
     const fileName = fs.readFileSync(`${postsDirectory}${slug}.md`, 'utf-8');
     const { data: frontmatter, content } = matter(fileName);
     return {
