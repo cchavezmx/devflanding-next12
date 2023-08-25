@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "/post/*"
+  to = "/post/:splat"
+  query = { slug = ":splat"}
+  status = 200
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+
