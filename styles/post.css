@@ -1,0 +1,121 @@
+/* ==================================== post ==================================== */
+main {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 70px;
+}
+
+#post {
+  padding: 0 40px;
+}
+
+#post h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#post h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#post hr {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  background-color: var(--color-neutral-alpha-dark-20);
+}
+
+.loading_post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 70px;
+  height: 100vh;
+}
+
+.loading_post h1 {
+  margin-top: 50px;
+  font-size: 80px;
+}
+
+.imagen-post-container {
+  width: 100%;
+  height: auto;
+  background-color: #000;
+  margin: 20px 0;
+}
+
+.img-fluid {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.content-post {
+  width: 100%;
+  height: auto;
+  background-color: #000;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 18% 1fr;
+  grid-column-gap: 10px;
+}
+
+pre code {
+  margin: 2px;
+  display: block;
+  padding: 1rem;
+  overflow-x: auto;
+  background: var(--color-neutral-solid-80);
+  color: var(--color-neutral-solid-00);
+  border-radius: var(--radius-4);
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+#anchor-post a {
+  color: var(--color-primary-solid-00);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#anchor-post a:hover {
+  color: var(--color-brand-main-200);
+}
+
+#post_menu h5 {
+  font-size: 25px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  font-weight: 700px;
+  line-height: 21.79px;
+}
+
+#post_menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#post_menu ul li {
+  width: 100%;
+  height: 22px;
+  font-size: 16px;
+  line-height: 21.79px;
+  margin-bottom: 20px;
+}
+#post_menu .slide-item {
+  margin-bottom: 20px;
+  padding: 0;
+}
+#post_menu li a:before {
+  position: relative;
+  content: url("/list_green_dot.png");
+  margin-right: 10px;
+}
