@@ -2184,6 +2184,7 @@ nav {
   -webkit-backdrop-filter: blur(64px);
   z-index: 50;
   transition: 1s ease all;
+  top: 0;
 }
 
 nav img {
@@ -2817,4 +2818,3 @@ header.dark {
     transform: rotate(-360deg);
   }
 }
-

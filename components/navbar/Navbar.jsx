@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 import Link from 'next/link';
-import React from 'react';
 
 const Navbar = () => {
     return(
@@ -15,7 +14,7 @@ const Navbar = () => {
                     </div>
 
                     <button className="btn third light">Ir a campus</button>
-                    <Link href="/post/welcome">
+                    <Link href="/post/p1">
                     <button className="btn third light">Contenido</button>
                         </Link>
                     <button className="btn third light">comunidad</button>

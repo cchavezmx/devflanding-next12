@@ -1,11 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
-// import Image from 'next/image'
-// import styles from './page.module.css'
-// @ts-ignor
+import styles from '../styles/page.module.css'
 
 export default function Home() {
   return (    
-    <main>
+    <main className={styles.main}>
       <header className="container py-160 p-048 d-flex flex-direction-column gap-024 text-center">
         <h1>
             Aprende tecnología
