@@ -19,15 +19,19 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  
-  const fileName = fs.readFileSync(`${postsDirectory}${slug}.md`, 'utf-8');
-  const { data: frontmatter, content } = matter(fileName);
-  return {
-    props: {
-      frontmatter,
-      content,
-    },
-  };
+
+  const exclude = [".git", "css", "index.html", "ima"]
+
+  if (!exclude.includes(slug)) {
+    const fileName = fs.readFileSync(`${postsDirectory}${slug}.md`, 'utf-8');
+    const { data: frontmatter, content } = matter(fileName);
+    return {
+      props: {
+        frontmatter,
+        content,
+      },
+    };
+  }
 }
 
 export default function PostPage({ frontmatter, content }) {
